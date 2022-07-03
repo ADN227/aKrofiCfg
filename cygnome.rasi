@@ -1,0 +1,126 @@
+/* Tema de rofi inspirado en gnome y cyberpunk 2077
+- Enfocado a mostrar las apliciones instaladas en el sistema
+- Usando Nerd Font Hack mono
+- Y usando un color de resaltado #44ffdf
+*/
+configuration {
+	font: "Hack Nerd Font Bold 10";
+	drun-display-format: "{name}";
+	disable-history: true;
+	fullscreen: true;
+	hide-scrollbar: true;
+	modi: "drun";
+	show-icons: true;
+}
+
+/*Define los colores que usa el tema*/
+* {
+	Background: #0f0e16cc;
+	Border: #B93838;
+	Title: #50191ecc;
+	Foreground: #c9545a;
+	Transparent: #00000000;
+	Base: #34e2e2;
+	Urgent: #131220;
+}
+
+/* Difine el uso del 100% de la pantalla con una opacidad de 60/255 */
+window {
+	transparency: "real";
+	background-color: @Background;
+	text-color: @Foreground;
+	border: 0;
+	border-radius: 8;
+	width: 100%;
+	height: 100%;
+	location: center;
+	x-offset: 0;
+	y-offset: 0;
+}
+
+/* Define las propiedades de la barra de busqueda */
+entry {
+	background-color: @Border;
+	text-color: @Urgent;
+	placeholder-color: @Foreground;
+	expand: true;
+	horizontal-align: 0;
+	placeholder: "";
+	padding: 0.15% 0% 0% 0%;
+	blink: true;
+}
+inputbar {
+	children: [ entry ];
+	background-color: @Border;
+	border-color: @Border;
+	expand: false;
+	border: 2;
+	margin: 1%;
+	padding: 10;
+	position: center;
+}
+
+/* Define la cantidad maxima de lementos a mostrar por hoja */
+listview {
+	background-color: @Transparent;
+	columns: 9;
+	lines: 6;
+	cycle: true;
+	dynamic: true;
+	layout: vertical;
+}
+
+/* Define lo que muestra rofi */
+mainbox {
+	background-color: @Transparent;
+	border: 0;
+	children: [ inputbar, listview ];
+	padding: 12% 8%;
+}
+
+/* Define el color de los elementos */
+element {
+	background-color: @Transparent;
+	orientation: vertical;
+	padding: 8;
+}
+element-icon {
+	background-color: @Transparent;
+	size: 48px;
+}
+element-text {
+	background-color: @Transparent;
+	horizontal-align: 0.5;
+	text-color: @Foreground;
+	vertical-align: 0.5;
+}
+element normal.urgent,
+element alternate.urgent {
+	background-color: @Urgent;
+}
+
+/* Define el color de los elementos seleccionados */
+element normal.active,
+element alternate.active {
+	background-color: @Transparent;
+}
+element selected {
+	background-color: @Title;
+	border: 2;
+	border-color: @Border;
+}
+element-icon selected {
+	background-color: @Transparent;
+}
+element-text selected {
+	background-color: @Transparent;
+	text-color: @Base;
+	vertical-align: 0.5;
+}
+element selected.urgent {
+	background-color: @Urgent;
+}
+element selected.active {
+	background-color: @Transparent;
+	color: @Foreground;
+}
