@@ -1,11 +1,11 @@
-# Mis temas de rofi
+# Rofi dotfiles
 
 [![rofi.png](https://i.postimg.cc/6pqT83TC/rofi.png)](https://postimg.cc/9D3cScdf)
 
-Para usar el tema de rofi, se debe crear un directorio llamado `~/.config/rofi` donde se alojen los archivos de configuracion y usar el comando:
+Mis temas de rofi basados en gnome y cyberpunk 2077
 
-    rofi -show drun -theme gnome
+### Ejemplo de uso
 
-o
-
-    rofi -show window -theme base
+```bash
+rofi -show drun -theme gnome
+```
