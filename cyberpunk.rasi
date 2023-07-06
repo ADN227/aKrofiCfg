@@ -1,10 +1,10 @@
 /* Tema de rofi inspirado en gnome y cyberpunk 2077
 - Enfocado a mostrar las apliciones instaladas en el sistema
-- Usando Nerd Font Hack mono
+- Usando Hack bold
 - Y usando un color de resaltado #44ffdf
 */
 configuration {
-	font: "Hack Nerd Font Bold 10";
+	font: "Hack Bold 10";
 	drun-display-format: "{name}";
 	disable-history: true;
 	fullscreen: true;
@@ -30,12 +30,9 @@ window {
 	background-color: @Background;
 	text-color: @Foreground;
 	border: 0;
-	border-radius: 8;
 	width: 100%;
 	height: 100%;
 	location: center;
-	x-offset: 0;
-	y-offset: 0;
 }
 
 /* Define las propiedades de la barra de busqueda */
@@ -63,8 +60,8 @@ inputbar {
 /* Define la cantidad maxima de lementos a mostrar por hoja */
 listview {
 	background-color: @Transparent;
-	columns: 9;
-	lines: 6;
+	columns: 4;
+	lines: 15;
 	cycle: true;
 	dynamic: true;
 	layout: vertical;
@@ -75,22 +72,22 @@ mainbox {
 	background-color: @Transparent;
 	border: 0;
 	children: [ inputbar, listview ];
-	padding: 12% 8%;
+	padding: 6% 2%;
 }
 
 /* Define el color de los elementos */
 element {
 	background-color: @Transparent;
-	orientation: vertical;
-	padding: 8;
+	orientation: horizontal;
 }
 element-icon {
 	background-color: @Transparent;
-	size: 48px;
+	size: 24px;
+	padding: 1%;
 }
 element-text {
 	background-color: @Transparent;
-	horizontal-align: 0.5;
+	horizontal-align: 0;
 	text-color: @Foreground;
 	vertical-align: 0.5;
 }
