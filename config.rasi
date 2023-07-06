@@ -1,27 +1,25 @@
 /*
 Tema de rofi:
 - Enfocado a mostrar las ventanas abiernas en una lista 
-- Usando Nerd Font Hack mono
-- Con un fondo de pantalla solido 
-- Y usando un color de resaltado #44ffdf
+- Usando Nerd Font Hack
 */
 
 configuration {
-	font: "Hack Nerd Font mono 10";
+	font: "Hack 10";
 	drun-display-format: "{name}";
 	disable-history: false;
 	fullscreen: true;
 	hide-scrollbar: true;
 	modi: "window";
-	show-icons: false;
+	show-icons: true;
 }
 
 /*Define los colores que usa el tema*/
 * {
-	Background: #000000ff;
+	Background: #00000060;
 	Foreground: #FEFFF1ff;
 	Transparent: #00000000;
-	Base: #44ffdfff;
+	Base: #000000c0;
 	Urgent: #EAC935FF;
 }
 
@@ -30,31 +28,28 @@ window {
 	transparency: "real";
 	background-color: @Background;
 	text-color: @Foreground;
-	border: 0;
-	border-radius: 8 0 0 0;
-	location: west;
 	width: 30%;
-	height: 70%;
-	x-offset: 4;
-	y-offset: 0;
+	height: 61%;
+	location: north west;
+	x-offset: 6;
+	y-offset: 30;
 }
 
 /* Define la forma en que se muestran los datos */
 listview {
+	fixed-height: 0;
 	background-color: @Transparent;
 	columns: 1;
+	lines: 8;
 	cycle: true;
 	dynamic: true;
 	layout: vertical;
-	margin: 3% 1%;
 }
 
 /* Define lo que muestra rofi */
 mainbox {
 	background-color: @Background;
 	border: 0;
-	border-radius: 0% 0% 0% 0%;
-	border-color: @Base;
 	children: [ listview ];
 }
 
@@ -62,15 +57,22 @@ mainbox {
 element {
 	background-color: @Transparent;
 	text-color: @Foreground;
-	orientation: vertical;
-	border-radius: 0%;
-	padding: 1% 0% 1% 0%;
+	orientation: horizontal;
+	border-radius: 0;
+	padding: 2% 1%;
 }
+
+element-icon {
+	background-color: @Transparent;
+	size: 20;
+}
+
 element-text {
 	background-color: @Transparent;
 	text-color: @Foreground;
 	expand: true;
 	vertical-align: 0.5;
+	horizontal-align: 0;
 	margin: 0.5% 1% 0% 1%;
 }
 element normal.urgent,
@@ -87,11 +89,9 @@ element alternate.active {
 	text-color: @Foreground;
 }
 element selected {
-	background-color: @Transparent;
+	background-color: @Base;
 	text-color: @Foreground;
-	border: 0% 0% 0.3% 0%;
-	border-radius: 0% 0% 0% 0%;
-	border-color: @Base;
+	border: 0%;
 }
 element-icon selected {
 	background-color: @Transparent;
