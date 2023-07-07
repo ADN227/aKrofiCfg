@@ -6,6 +6,7 @@ Mis temas de [rofi](https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.
 
 ### Tipos de letra
 - [ttf-hack](https://sourcefoundry.org/hack/)
+- [ttf-nerd-fonts-symbols](https://github.com/ryanoasis/nerd-fonts)
 - [SF Pro](https://developer.apple.com/fonts/)
 
 ### Paquetes de iconos
@@ -17,3 +18,4 @@ Mis temas de [rofi](https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.
 |cyberpunk|`rofi -show drun -theme cyberpunk`|Mostrar la lista de aplicaciones instaladas|![2023-07-06-17-34.png](https://i.postimg.cc/3Rkj3Km7/2023-07-06-17-34.png)|
 |gnome    |`rofi -show drun -theme gnome`|Mostrar la lista de aplicaciones instaladas|![2023-07-06-17-36.png](https://i.postimg.cc/pdZzfmYP/2023-07-06-17-36.png)|
 |config   |`rofi -show window -theme config`|Mostrar la lista de ventanas abiertas|![2023-07-06-17-37.png](https://i.postimg.cc/YqG65qkx/2023-07-06-17-37.png)|
+|base|`zsh .config/rofi/scripts/powermenu.sh`|Mostrar menú de apagado y reinicio usando [nerd fonts](https://www.nerdfonts.com/cheat-sheet)|![2023-07-06-20-20.png](https://i.postimg.cc/0jhsygnh/2023-07-06-20-20.png)|
