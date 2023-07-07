@@ -90,6 +90,7 @@ element {
 element-icon {
 	background-color: @Transparent;
 	size: 48px;
+	margin: 0.5%;
 }
 element-text {
 	background-color: @Transparent;
@@ -97,7 +98,6 @@ element-text {
 	text-color: @Foreground;
 	expand: true;
 	vertical-align: 0.5;
-	margin: 0.5% 1% 0% 1%;
 }
 element normal.urgent,
 element alternate.urgent {
